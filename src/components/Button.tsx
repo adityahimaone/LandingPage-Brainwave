@@ -6,17 +6,21 @@ interface IProps {
   href?: string;
   onClick?: () => void;
   children: React.ReactNode;
-  px?: number;
+  px?: string;
   white?: boolean;
 }
 
 const Button = ({ className, href, onClick, children, px, white }: IProps) => {
   const classes = cn(
     'hover: button relative inline-flex h-11 items-center justify-center transition-colors hover:text-color-1',
-    px ? `px-${px}` : 'px-7',
+    px ? px : 'px-7',
     white ? 'text-n-8' : 'text-n-1',
     className
   );
+
+  white = white === undefined ? false : white;
+
+  console.log(white, 'white');
 
   const renderButton = () => {
     return (

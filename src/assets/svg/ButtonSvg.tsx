@@ -1,5 +1,5 @@
 interface IProps {
-  white?: boolean;
+  white: boolean;
 }
 
 const ButtonSvg = (white: IProps) => (
