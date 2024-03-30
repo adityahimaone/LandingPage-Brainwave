@@ -26,7 +26,7 @@ const Button = ({ className, href, onClick, children, px, white }: IProps) => {
     return (
       <button className={classes} onClick={onClick}>
         <span className="relative z-10">{children}</span>
-        {ButtonSvg(white)}
+        <ButtonSvg white={white} />
       </button>
     );
   };
@@ -35,7 +35,7 @@ const Button = ({ className, href, onClick, children, px, white }: IProps) => {
     return (
       <a className={classes} href={href}>
         <span className="relative z-10">{children}</span>
-        {ButtonSvg(white)}
+        <ButtonSvg white={white} />
       </a>
     );
   };

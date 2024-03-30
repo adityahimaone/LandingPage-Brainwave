@@ -1,8 +1,8 @@
 interface IProps {
-  white: boolean;
+  white?: boolean;
 }
 
-const ButtonSvg = (white: IProps) => (
+const ButtonSvg = ({ white }: IProps) => (
   <>
     <svg
       className="absolute left-0 top-0"
